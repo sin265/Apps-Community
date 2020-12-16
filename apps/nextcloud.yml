@@ -36,10 +36,9 @@
       set_fact:
         pg_volumes:
           - '/etc/localtime:/etc/localtime:ro'
-          - '/opt/appdata/nextcloud/data:/data'
+          - '/nextcloud:/data'
           - '/opt/appdata/{{pgrole}}/conf:/config'
           - '{{path.stdout}}:{{path.stdout}}'
-          - '/nextcloud:/nextcloud'
 
     - name: 'Setting PG ENV'
       set_fact:
